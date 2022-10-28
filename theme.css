@@ -329,21 +329,22 @@
   }
   
   blockquote {
-	margin: 20px 0;
-	border-radius: 0 4px 4px 0 !important;
-	background: var(--background-primary-alt);
-	box-shadow: -2px 0 0 0 var(--color-green-4) !important;
+	  margin: 20px 0;
+	  border-radius: 0 4px 4px 0 !important;
+	  background: var(--background-primary-alt);
+	  box-shadow: -2px 0 0 0 var(--color-green-4) !important;
   }
   
   body .markdown-preview-view blockquote {
-	padding: 1rem 1.5rem 1rem 1.5rem;
-	background: var(--background-primary-alt);
-	color: var(--text-normal);
-	font-style: italic;
-	line-height: 2;
-	border-radius: 6px;
-	border-width: 1px;
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+	  padding: 1rem 1.5rem 1rem 1.5rem;
+	/* cannot figure out how to use a variable and add transparency here */
+	  background: rgba(48, 54, 61, 0.35);
+	  color: var(--text-normal);
+	  font-style: italic;
+	  line-height: 2;
+	  border-radius: 6px;
+	  border-width: 1px;
+	  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   }
   
   mjx-container[jax='CHTML'] {
