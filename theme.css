@@ -1,6 +1,6 @@
 /*---------------------------------------
   Search the following lines
-  to jump to specific section (jk, TODO)
+  to jump to specific section (jk)
 -----------------------------------------
 - 
 ---------------------------------------*/
@@ -232,11 +232,14 @@
 	padding-right: 24px;
   }
   
-  .callout-title {
-	font-size: 110% !important;
+  :not(.is-collapsed) > .callout-title {
 	border-bottom: 2px solid rgba(var(--callout-color), 0.3) !important;
 	padding-bottom: calc((1rem / 2) * 1);
 	margin-bottom: 6px;
+  }
+  
+  .callout-title {
+	font-size: 110% !important;
   }
   
   /* Lists */
