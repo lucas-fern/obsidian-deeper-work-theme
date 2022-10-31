@@ -7,7 +7,7 @@
 
 /* Custom Font */
 :root {
-	--font-monospace: 'Consolas', monospace;
+	--font-monospace: 'JetBrains Mono', 'Consolas', monospace;
   
 	--color-black: #010409;
 	--color-white: #f7f9fc;
@@ -352,24 +352,22 @@
 	outline: none;
   }
   
+  /* Math */
+  
   .math-block {
 	font-size: 1.4em;
   }
   
-  .cm-s-obsidian pre.HyperMD-codeblock,
-  .cm-s-obsidian span.cm-inline-code,
-  .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
-  .markdown-preview-view code {
-	/* fix `` tag color */
-	color: #98c379;
+  .math-inline {
+	font-size: 1.2em;
   }
   
   .cm-s-obsidian span.cm-inline-code,
   .cm-s-obsidian span.cm-math,
   .cm-s-obsidian span.hmd-fold-math-placeholder {
 	/* fix tag size */
-	font-weight: 100;
 	font-style: normal;
+	font-family: "JetBrains Mono" !important;
   }
   
   .markdown-preview-view code {
@@ -401,10 +399,13 @@
   h4,
   h5,
   h6,
-  strong,
-  b,
   .view-header-title {
 	font-weight: 600;
+  }
+  
+  strong, 
+  b {
+	font-weight: 700;
   }
   
   h1,
