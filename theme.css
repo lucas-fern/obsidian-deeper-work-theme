@@ -136,7 +136,7 @@
 	--interactive-success: var(--color-green-5);
 	--scrollbar-active-thumb-bg: var(--text-accent);
 	--scrollbar-bg: var(--background-primary);
-	--scrollbar-thumb-bg: var(--background-primary-alt);
+	--scrollbar-thumb-bg: var(--color-gray-6);
 	--highlight-mix-blend-mode: screen;
 	--color-topic-tag-bg: rgba(56, 139, 253, 0.1);
 	--cursor-bg: var(--color-green-3);
@@ -508,8 +508,12 @@
 	color: var(--color-yellow-1);
   }
   
-  /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
+  /* Code blocks */
+  code {
+	font-family: "JetBrains Mono" !important;
+  }
   
+  /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
   code[class*='language-'],
   pre[class*='language-'] {
 	text-align: left !important;
@@ -527,8 +531,6 @@
 	hyphens: none !important;
   }
   
-  /* Code blocks */
-  
   pre[class*='language-'] {
 	padding: 1em !important;
 	margin: .5em 0 !important;
@@ -536,6 +538,10 @@
   }
   
   /* Inline code */
+  
+  :not(pre)>code {
+	color: var(--color-green-3) !important;
+  }
   
   :not(pre)>code[class*='language-'] {
 	padding: .1em !important;
