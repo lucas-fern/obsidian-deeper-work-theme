@@ -217,6 +217,12 @@
 	border-radius: 4px;
   }
   
+  /* Images */
+  img {
+	margin-top: 10px;
+	margin-bottom: 5px;
+  }
+  
   /* Tab Headers */
   .workspace-tab-header {
 	background-color: var(--color-gray-8) !important;
