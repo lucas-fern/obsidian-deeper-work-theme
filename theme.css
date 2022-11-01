@@ -683,9 +683,10 @@
   }
   
   /* Tab Headers */
-  .workspace-tab-header {
-	background-color: var(--color-gray-8) !important;
-	box-shadow: rgba(0, 0, 0, 0.1) -20px 0 10px 0 !important;
+  .mod-stacked .workspace-tab-header {
+	/* background-color: var(--color-gray-8) !important;
+	box-shadow: rgba(0, 0, 0, 0.1) -20px 0 10px 0 !important; */
+	box-shadow: rgba(0, 0, 0, 0.2) -20px 0 20px 10px, -1px 0 0 0 var(--tab-outline-color), var(--tab-stacked-shadow) !important;
   }
   
   .workspace-tab-header-inner-title {
