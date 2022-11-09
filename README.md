@@ -15,14 +15,14 @@
 
 _All samples use [JetBrains Mono](https://www.jetbrains.com/lp/mono/) for all font options in the Obsidian settings._
 
-> ##### Full App Screenshot
+> #### Full App Screenshot
 >
 > ![an image of the theme, containing stacked panes, admonitions, math, and sidebar views](images/deeper-work.png)
 
-> ##### Sample Note
+> #### Sample Note
 >
 > ![an image of the theme, containing stacked panes, admonitions, math, and sidebar views](images/sample-note.png)
 
-> ##### Callouts
+> #### Callouts
 >
 > ![an image of the theme, containing stacked panes, admonitions, math, and sidebar views](images/callouts.png)
