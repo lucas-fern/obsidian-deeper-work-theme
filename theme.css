@@ -205,8 +205,8 @@ settings:
 }
 
 /*---------------------------------------
-	  Documents: Text Properties
-	---------------------------------------*/
+	Documents: Text Properties
+  ---------------------------------------*/
 
 /* Monospace */
 .markdown-source-view {
@@ -225,8 +225,8 @@ body {
 }
 
 /*---------------------------------------
-	  Documents: Text / Headings
-	---------------------------------------*/
+	Documents: Text / Headings
+  ---------------------------------------*/
 
 /* Headings */
 .markdown-preview-section:not(:first-child) h1,
@@ -285,8 +285,10 @@ b {
 }
 
 strong,
-em {
-  color: var(--color-green-3);
+em,
+.cm-strong,
+.cm-em {
+  color: var(--color-green-3) !important;
 }
 
 /* Links */
@@ -343,8 +345,8 @@ ol {
 }
 
 /*---------------------------------------
-	  Documents: Math
-	---------------------------------------*/
+	Documents: Math
+  ---------------------------------------*/
 
 /* Math */
 mjx-container[jax='CHTML'] {
@@ -374,8 +376,8 @@ mjx-container[jax='CHTML'] {
 }
 
 /*---------------------------------------
-	  Documents: Code
-	---------------------------------------*/
+	Documents: Code
+  ---------------------------------------*/
 
 /* Code */
 .theme-dark :not(pre) > code[class*='language-'],
@@ -539,8 +541,8 @@ pre.line-numbers > code {
 }
 
 /*---------------------------------------
-	  Documents: Callouts / Quotes
-	---------------------------------------*/
+	Documents: Callouts / Quotes
+  ---------------------------------------*/
 
 .callout {
   padding-right: 24px;
@@ -576,8 +578,8 @@ body .markdown-preview-view blockquote {
 }
 
 /*---------------------------------------
-	  Documents: Tables / Images / Files
-	---------------------------------------*/
+	Documents: Tables / Images / Files
+  ---------------------------------------*/
 
 img {
   margin-top: 10px;
@@ -621,8 +623,8 @@ th {
 }
 
 /*---------------------------------------
-	  Graph
-	---------------------------------------*/
+	Graph
+  ---------------------------------------*/
 
 .graph-view.color-fill-attachment {
   color: var(--color-blue-7);
@@ -633,8 +635,8 @@ th {
 }
 
 /*---------------------------------------
-	  Interface Elements
-	---------------------------------------*/
+	Interface Elements
+  ---------------------------------------*/
 
 .titlebar {
   background-color: var(--background-secondary-alt);
@@ -710,7 +712,7 @@ th {
 /* Tab Headers */
 .mod-stacked .workspace-tab-header {
   /* background-color: var(--color-gray-8) !important;
-	  box-shadow: rgba(0, 0, 0, 0.1) -20px 0 10px 0 !important; */
+	box-shadow: rgba(0, 0, 0, 0.1) -20px 0 10px 0 !important; */
   box-shadow: rgba(0, 0, 0, 0.2) -20px 0 20px 10px,
     -1px 0 0 0 var(--tab-outline-color), var(--tab-stacked-shadow) !important;
 }
