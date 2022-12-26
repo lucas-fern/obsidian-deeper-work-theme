@@ -598,14 +598,14 @@ th {
 }
 
 /* Files */
-.markdown-embed:not(.hover-popover .markdown-embed),
+/* .markdown-embed:not(.hover-popover .markdown-embed),
 .file-embed {
   margin: 0;
   border-radius: 4px;
   margin: 0 !important;
   margin-inline-start: 30px !important;
   margin-inline-end: 30px !important;
-}
+} */
 
 .markdown-embed {
   border: 1px solid var(--background-modifier-border);
