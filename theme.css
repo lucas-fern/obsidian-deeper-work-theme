@@ -581,11 +581,6 @@ body .markdown-preview-view blockquote {
 	Documents: Tables / Images / Files
   ---------------------------------------*/
 
-img {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
 /* Tables */
 th {
   font-weight: 600 !important;
