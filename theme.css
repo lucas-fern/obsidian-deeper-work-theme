@@ -49,8 +49,15 @@ settings:
         description: The line height of paragraph text
         type: variable-number
         default: 1.5
-
+    -
+        id: h3456-color
+        title: Heading 3-6 Color
+        type: variable-color
+        format: hex
+        default: '#c9d1d9'
 */
+
+/* Alternative Heading Colour: #FC6DAB */
 
 /*---------------------------------------
   Theme
@@ -137,7 +144,7 @@ settings:
   --color-pink-1: #ffbedd;
   --color-pink-2: #ff9bce;
   --color-pink-3: #f778ba;
-  --color-pink-4: #db61a2;
+  --color-pink-4: #FC6DAB;
   --color-pink-5: #bf4b8a;
   --color-pink-6: #9e3670;
   --color-pink-7: #7d2457;
@@ -202,6 +209,11 @@ settings:
   --purple: #c678dd;
   --blue: #61afef;
   --yellow: #e5c07b;
+
+  --h3-color: var(--h3456-color);
+  --h4-color: var(--h3456-color);
+  --h5-color: var(--h3456-color);
+  --h6-color: var(--h3456-color);
 }
 
 /*---------------------------------------
@@ -254,21 +266,33 @@ h4,
 h5,
 h6,
 .view-header-title {
-  font-weight: 600;
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 2.1em !important;
 }
 
 h1,
 h2 {
-  border-bottom: 1px solid var(--background-secondary-alt);
+  border-bottom: 2px solid var(--background-secondary-alt);
+  /* border-bottom: 2px solid rgba(252, 109, 171, 0.2); */
   font-weight: 600;
   line-height: 1.25;
   padding-bottom: calc((1rem / 2) * 1);
 }
 
+h3 {
+  font-size: 1.5em !important;
+}
+
+h4 {
+  font-style: italic !important;
+}
+
 body .markdown-preview-view h6 {
   font-style: italic;
-  font-weight: 400;
-  line-height: 2 !important;
+  font-weight: 400 !important;
 }
 
 /* Text */
@@ -318,24 +342,12 @@ ol {
   line-height: var(--line-height, 1.5);
 }
 
+ul p,
+ol p {
+  margin-bottom: 4px;
+}
+
 /* Checkboxes / Tasks */
-.markdown-preview-view .task-list-item-checkbox {
-  box-sizing: border-box;
-  border-radius: 2px;
-  position: relative;
-  right: 4px;
-  margin-right: 5px;
-  margin-bottom: 2px;
-  cursor: pointer;
-  vertical-align: text-bottom;
-}
-
-.markdown-preview-view .task-list-item-checkbox:checked {
-  border: none;
-  padding-top: 0px;
-  background-color: var(--interactive-accent);
-}
-
 .markdown-preview-view .task-list-item.is-checked a {
   filter: saturate(0.8) brightness(0.7);
 }
@@ -380,7 +392,7 @@ mjx-container[jax='CHTML'] {
   ---------------------------------------*/
 
 /* Code */
-.theme-dark :not(pre) > code[class*='language-'],
+.theme-dark :not(pre)>code[class*='language-'],
 .theme-dark pre[class*='language-'] {
   background: var(--background-primary-alt);
 }
@@ -415,11 +427,11 @@ pre[class*='language-'] {
 }
 
 /* Inline code */
-:not(pre) > code {
+:not(pre)>code {
   color: var(--color-green-3) !important;
 }
 
-:not(pre) > code[class*='language-'] {
+:not(pre)>code[class*='language-'] {
   padding: 0.1em !important;
   border-radius: 0.3em !important;
   white-space: normal !important;
@@ -506,7 +518,7 @@ pre.line-numbers {
   counter-reset: linenumber !important;
 }
 
-pre.line-numbers > code {
+pre.line-numbers>code {
   position: relative !important;
 }
 
@@ -526,13 +538,13 @@ pre.line-numbers > code {
   user-select: none !important;
 }
 
-.line-numbers-rows > span {
+.line-numbers-rows>span {
   pointer-events: none !important;
   display: block !important;
   counter-increment: linenumber !important;
 }
 
-.line-numbers-rows > span:before {
+.line-numbers-rows>span:before {
   content: counter(linenumber) !important;
   color: var(--syntax-gray-1) !important;
   display: block !important;
@@ -548,14 +560,16 @@ pre.line-numbers > code {
   padding-right: 24px;
 }
 
-:not(.is-collapsed) > .callout-title {
+:not(.is-collapsed)>.callout-title:not(:only-child) {
   border-bottom: 2px solid rgba(var(--callout-color), 0.3) !important;
-  padding-bottom: calc((1rem / 2) * 1);
+  padding-bottom: 0.6rem;
   margin-bottom: 6px;
 }
 
-.callout-title {
-  font-size: 110% !important;
+.callout-title-inner {
+  line-height: 1.4em;
+  font-size: 120% !important;
+  vertical-align: bottom !important;
 }
 
 blockquote {
@@ -593,15 +607,6 @@ th {
 }
 
 /* Files */
-/* .markdown-embed:not(.hover-popover .markdown-embed),
-.file-embed {
-  margin: 0;
-  border-radius: 4px;
-  margin: 0 !important;
-  margin-inline-start: 30px !important;
-  margin-inline-end: 30px !important;
-} */
-
 .markdown-embed {
   border: 1px solid var(--background-modifier-border);
   border-left-width: 5px;
@@ -673,7 +678,7 @@ th {
   margin: auto 0;
 }
 
-.status-bar-item > * {
+.status-bar-item>* {
   padding-top: var(--bar-vertical-padding) !important;
   padding-bottom: var(--bar-vertical-padding) !important;
 }
@@ -689,11 +694,6 @@ th {
 
 .mod-top .tooltip-arrow {
   border-top-color: var(--background-secondary-alt) !important;
-}
-
-.dropdown {
-  cursor: pointer;
-  background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234c78cc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
 }
 
 .dropdown:hover {
