@@ -214,6 +214,13 @@ settings:
   --h4-color: var(--h3456-color);
   --h5-color: var(--h3456-color);
   --h6-color: var(--h3456-color);
+  --h2-size: 1.4rem;
+  --h3-size: 1.35rem;
+  --h4-size: 1.3rem;
+  --h5-size: 1.125rem;
+  --h6-size: 1.125rem;
+
+  --heading-spacing: 2rem;
 }
 
 /*---------------------------------------
@@ -269,21 +276,12 @@ h6,
   font-weight: 700 !important;
 }
 
-h1 {
-  font-size: 2.1em !important;
-}
-
 h1,
 h2 {
   border-bottom: 2px solid var(--background-secondary-alt);
   /* border-bottom: 2px solid rgba(252, 109, 171, 0.2); */
-  font-weight: 600;
   line-height: 1.25;
   padding-bottom: calc((1rem / 2) * 1);
-}
-
-h3 {
-  font-size: 1.5em !important;
 }
 
 h4 {
@@ -713,7 +711,7 @@ th {
 }
 
 .workspace-tab-header-inner-title {
-  font-size: 16px !important;
+  font-size: 1em !important;
 }
 
 /* Navigation */

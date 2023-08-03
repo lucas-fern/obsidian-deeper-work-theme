@@ -1,6 +1,6 @@
 {
   "name": "deeper-work",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "scripts": {
     "version": "node version-bump.mjs && git add manifest.json versions.json"
   }
