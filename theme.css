@@ -15,6 +15,7 @@
   - Links
   - Lists
   - Checkboxes / Tasks
+  - Rules
 - Math
 - Code
   - Code blocks
@@ -54,10 +55,10 @@ settings:
         title: Heading 3-6 Color
         type: variable-color
         format: hex
-        default: '#c9d1d9'
+        default: '#FC6DAB'
 */
 
-/* Alternative Heading Colour: #FC6DAB */
+/* Alternative Heading Colour: #C9D1D9 */
 
 /*---------------------------------------
   Theme
@@ -214,13 +215,17 @@ settings:
   --h4-color: var(--h3456-color);
   --h5-color: var(--h3456-color);
   --h6-color: var(--h3456-color);
-  --h2-size: 1.4rem;
-  --h3-size: 1.35rem;
-  --h4-size: 1.3rem;
-  --h5-size: 1.125rem;
-  --h6-size: 1.125rem;
 
-  --heading-spacing: 2rem;
+  --h1-size: 1.55rem;
+  --h2-size: 1.4rem;
+  --h3-size: 1.3rem;
+  --h4-size: 1.2rem;
+  --h5-size: 1.1rem;
+  --h6-size: 1.1rem;
+
+  --heading-spacing: 1.5rem;
+
+  --code-size: 1em;
 }
 
 /*---------------------------------------
@@ -248,23 +253,6 @@ body {
   ---------------------------------------*/
 
 /* Headings */
-.markdown-preview-section:not(:first-child) h1,
-.markdown-preview-section:not(:first-child) h2,
-.markdown-preview-section:not(:first-child) h3,
-.markdown-preview-section:not(:first-child) h4,
-.markdown-preview-section:not(:first-child) h5,
-.markdown-preview-section:not(:first-child) h6 {
-  margin-top: 40px !important;
-}
-
-.markdown-preview-section h1,
-.markdown-preview-section h2,
-.markdown-preview-section h3,
-.markdown-preview-section h4,
-.markdown-preview-section h5,
-.markdown-preview-section h6 {
-  line-height: 1.2;
-}
 
 h1,
 h2,
@@ -354,6 +342,12 @@ ol p {
   font-family: var(--font-monospace);
 }
 
+/* Lines/Horizontal Rules */
+
+hr {
+  margin: 1.5rem 0;
+}
+
 /*---------------------------------------
 	Documents: Math
   ---------------------------------------*/
@@ -388,12 +382,6 @@ mjx-container[jax='CHTML'] {
 /*---------------------------------------
 	Documents: Code
   ---------------------------------------*/
-
-/* Code */
-.theme-dark :not(pre)>code[class*='language-'],
-.theme-dark pre[class*='language-'] {
-  background: var(--background-primary-alt);
-}
 
 /* Code blocks */
 code {
